@@ -6,11 +6,11 @@
 /*   By: aramos-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 20:57:33 by aramos-m          #+#    #+#             */
-/*   Updated: 2023/10/03 22:00:45 by aramos-m         ###   ########.fr       */
+/*   Updated: 2023/10/16 21:28:40 by aramos-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include <string.h>
+
+#include "libft.h"
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
@@ -18,6 +18,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	const char		*auxsrc;
 	char			*auxdst;
 
+	if ((dst == NULL) && (src == NULL))
+		return (NULL);
 	i = 0;
 	auxsrc = src;
 	auxdst = dst;
@@ -28,8 +30,9 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
-
-/*int	main()
+/*#include <stdio.h>
+#include <string.h>
+int	main()
 {
 	char	src[] = "Hola, mundo!";
 	char	dst[] = "123456789";
