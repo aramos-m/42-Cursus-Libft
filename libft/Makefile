@@ -1,5 +1,6 @@
 SRCS	=	ft_strlen.c \
 			ft_memcpy.c \
+			ft_strchr.c \
 
 OBJS	=	${SRCS:.c=.o}
 
