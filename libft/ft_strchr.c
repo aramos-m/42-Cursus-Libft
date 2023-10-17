@@ -6,7 +6,7 @@
 /*   By: aramos-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 20:57:17 by aramos-m          #+#    #+#             */
-/*   Updated: 2023/10/17 20:21:55 by aramos-m         ###   ########.fr       */
+/*   Updated: 2023/10/17 21:08:18 by aramos-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ char	*ft_strchr(const char *s, int c)
 /*#include <stdio.h>
 #include <string.h>
 
-int	main()
+int	main(void)
 {
-	char	str[10] = "Soy Ana";
+	char	str[] = "Hello, World!";
 	int		c = 'I';
 
 	printf("Original function: %s\n", strchr(str, c));
