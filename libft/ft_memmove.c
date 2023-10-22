@@ -6,11 +6,11 @@
 /*   By: aramos-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 13:52:52 by aramos-m          #+#    #+#             */
-/*   Updated: 2023/10/12 15:04:12 by aramos-m         ###   ########.fr       */
+/*   Updated: 2023/10/22 21:05:15 by aramos-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include <string.h>
+
+#include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
@@ -37,8 +37,9 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (dst);
 }
-
-/*int	main()
+/*#include <stdio.h>
+#include <string.h>
+int	main(void)
 {
 	char	str1[] = "Ana, Ana";
 	char	str2[] = "Hello, World!";

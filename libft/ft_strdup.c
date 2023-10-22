@@ -1,39 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aramos-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/13 20:59:21 by aramos-m          #+#    #+#             */
-/*   Updated: 2023/10/22 21:05:43 by aramos-m         ###   ########.fr       */
+/*   Created: 2023/10/22 20:14:14 by aramos-m          #+#    #+#             */
+/*   Updated: 2023/10/22 20:42:44 by aramos-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, unsigned long int len)
+char	*ft_strdup(const char *s)
 {
-	unsigned int	i;
-	char			*aux;
+	char	*aux;
 
-	aux = b;
-	i = 0;
-	while (i < len)
-	{
-		aux[i] = c;
-		i++;
-	}
-	return (b);
+	aux = (char *)malloc(sizeof(*aux) * (ft_strlen(s) + 1));
+	if (aux == NULL)
+		return (NULL);
+	else
+		ft_strlcpy(aux, s, ft_strlen(s) + 1);
+	return (aux);
 }
-/*#include <string.h>
-#include <stdio.h>
-int	main	()
-{
-	char	dest[4] = "Hola";
-	char	*str;
-	unsigned long int len = 2;
-	int c = 'A';
-	printf("Original function:%s\n", memset(dest, c, len));
-	printf("Created fuction:%s\n", ft_memset(dest, c, len));
-}*/

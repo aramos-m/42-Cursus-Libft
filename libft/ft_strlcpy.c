@@ -6,11 +6,13 @@
 /*   By: aramos-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 16:41:40 by aramos-m          #+#    #+#             */
-/*   Updated: 2023/10/12 20:14:42 by aramos-m         ###   ########.fr       */
+/*   Updated: 2023/10/22 20:44:17 by aramos-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t ft_strlcpy(char *dst, const char *src, size_t dstsize)
+#include "libft.h"
+
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
 
@@ -31,5 +33,4 @@ size_t ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	while (src[i] != '\0')
 		i++;
 	return (i);
-
 }
