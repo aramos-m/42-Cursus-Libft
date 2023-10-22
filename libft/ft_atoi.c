@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aramos-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/17 19:19:29 by aramos-m          #+#    #+#             */
-/*   Updated: 2023/10/21 12:40:09 by aramos-m         ###   ########.fr       */
+/*   Created: 2023/10/22 18:42:04 by aramos-m          #+#    #+#             */
+/*   Updated: 2023/10/22 18:45:24 by aramos-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ int	main(void)
 {
 	char	str[] = "-1234a";
 
-	printf("Original function: %d\n", atoi(str));
-	printf("Created function: %d", ft_atoi(str));
+	printf("Actual: %d\n", atoi(str));
+	printf("Expected: %d", ft_atoi(str));
 	return (0);
 }*/
