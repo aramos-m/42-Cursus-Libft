@@ -24,6 +24,6 @@ int	main()
 {
 	int	c;
 	c = 128 + '0';
-	printf("Original function: %d\n", isascii(c));
-	printf("Created function: %d\n", ft_isascii(c));
+	printf("Actual: %d\n", isascii(c));
+	printf("Expected: %d\n", ft_isascii(c));
 }*/
