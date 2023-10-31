@@ -36,6 +36,6 @@ int	main ()
 	bzero(str1, 3);
 	ft_bzero(str1, 3);
 
-	printf("Original function: %s\n", str1);
-	printf("Created function: %s\n", str2);
+	printf("Actual: %s\n", str1);
+	printf("Expected: %s\n", str2);
 }*/
