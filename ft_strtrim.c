@@ -12,16 +12,32 @@
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s1, char const *set)
+char    *ft_strtrim(char const *s1, char const *set)
 {
-	char	*sset;
-	int		i;
-	int		j;
+        char    *sset;
+        int     i;
 
-	sset = (char *)malloc(sizeof(char) * (ft_strlen(s1) + 1));
-	if (sset == NULL)
-		return (NULL);
-	i = strchr(s1, set[0]);
-	if (i != 0)
-	{
-		while(
+        sset = (char *)malloc(sizeof(char) * (ft_strlen(s1) + 1));
+        if (sset == NULL)
+                return (NULL);
+        if (!s1[0] || !set[0])
+                return (NULL);
+        i = 0;
+        while (s1[i] && ft_strchr(set, s1[i]))
+                        i++;
+        s1 = s1 + i;
+        i = ft_strlen(s1);
+        while (i && ft_strchr(set, s1[i]))
+                i--;
+        sset = ft_substr(s1, 0, i+1);
+        return(sset);
+}
+
+/*#include <stdio.h>
+int main()
+{
+        const char      *s1 = "\tHola, mundo!\n\t";
+        const char      *set = "\t\n";
+        printf("%s\n", ft_strtrim(s1, set));
+        return 0;
+}*/
