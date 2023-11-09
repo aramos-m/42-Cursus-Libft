@@ -6,7 +6,7 @@
 /*   By: aramos-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 19:17:00 by aramos-m          #+#    #+#             */
-/*   Updated: 2023/10/30 19:50:12 by aramos-m         ###   ########.fr       */
+/*   Updated: 2023/11/09 15:15:21 by aramos-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putchar_fd('-', fd);
 		ft_putnbr_fd(-n, fd);
 	}
-	else if (n <= 10)
+	else if (n >= 10)
 	{
 		ft_putnbr_fd(n / 10, fd);
 		ft_putchar_fd(n % 10 + '0', fd);
 	}
 	else
-		ft_putchar_fd(n, fd);
+		ft_putchar_fd(n + '0', fd);
 }
