@@ -12,40 +12,40 @@
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	unsigned int	i;
-	char const		*auxsrc;
-	char			*auxdst;
-
+	size_t		i;
+	char		*auxdest;
+	char const	*auxsrc;
+	
+	auxdest = dest;
 	auxsrc = src;
-	auxdst = dst;
-	if (dst > src)
+	if (dest > src)
 	{
-		i = len;
+		i = n;
 		while (i--)
-			auxdst[i] = auxsrc[i];
+			auxdest[i] = auxsrc[i];
 	}
-	else if (dst < src)
+	else if (dest < src)
 	{
 		i = 0;
-		while (i < len)
+		while (i < n)
 		{
-			auxdst[i] = auxsrc[i];
+			auxdest[i] = auxsrc[i];
 			i++;
 		}
 	}
-	return (dst);
+	return (dest);
 }
 /*#include <stdio.h>
 #include <string.h>
-int	main(void)
+int	main()
 {
-	char	str1[] = "Ana, Ana";
-	char	str2[] = "Hello, World!";
-	int		n = 5;
+	char	dest[] = "Hola Ana";
+	char	src[] = "123456789";
+	int	n = 4;
 
-	printf("Original function: %s\n", memmove(str1, str2, n));
-	printf("Created function: %s\n", ft_memmove(str1, str2, n));
+	printf("Actual: %s\n", ft_memmove(dest, src, n));
+	printf("Expected: %s\n", memmove(dest, src, n));
 	return (0);
 }*/
