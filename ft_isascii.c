@@ -19,13 +19,11 @@ int	ft_isascii(int c)
 	return (0);
 }
 /*#include <stdio.h>
-#include <ctype.h>
 int	main()
 {
 	int	c;
 
 	c = 128;
-	printf("Actual: %d\n", ft_isascii(c));
-	printf("Expected: %d", isascii(c));
+	printf("%d", ft_isascii(c));
 	return(0);
 }*/

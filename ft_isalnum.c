@@ -20,13 +20,11 @@ int	ft_isalnum(int c)
 	return (0);
 }
 /*#include <stdio.h>
-#include <ctype.h>
 int	main()
 {
 	int	c;
 
 	c = 128;
-	printf("Actual: %d\n", ft_isalnum(c));
-	printf("Expected: %d", isalnum(c));
+	printf("%d", ft_isalnum(c));
 	return (0);
 }*/

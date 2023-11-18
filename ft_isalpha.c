@@ -18,9 +18,8 @@ int	ft_isalpha(int c)
 		return (1);
 	return (0);
 }
-
 /*#include <stdio.h>
-int main (void)
+int main ()
 {
 	int c;
 	c = ' ';

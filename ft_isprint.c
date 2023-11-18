@@ -19,13 +19,11 @@ int	ft_isprint(int c)
 	return (0);
 }
 /*#include <stdio.h>
-#include <ctype.h>
 int	main()
 {
 	int	c;
 	
 	c = '\t';
 	printf("Actual: %d\n", ft_isprint(c));
-	printf("Expected: %d", isprint(c));
 	return(0);
 }*/

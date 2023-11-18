@@ -19,7 +19,8 @@ int	ft_isdigit(int c)
 	return (0);
 }
 /*#include <stdio.h>
-int	main(void)
+#include <ctype.h>
+int	main()
 {
 	int c;
 
