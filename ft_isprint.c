@@ -22,9 +22,10 @@ int	ft_isprint(int c)
 #include <ctype.h>
 int	main()
 {
-	char	c;
+	int	c;
 	
-	c = ' ';
-	printf("Original function: %d\n", isprint(c));
-	printf("Created function: %d\n", ft_isprint(c));
+	c = '\t';
+	printf("Actual: %d\n", ft_isprint(c));
+	printf("Expected: %d", isprint(c));
+	return(0);
 }*/
