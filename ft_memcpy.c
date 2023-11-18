@@ -12,33 +12,33 @@
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	unsigned int	i;
-	const char		*auxsrc;
-	char			*auxdst;
+	size_t		i;
+	const char	*auxsrc;
+	char		*auxdest;
 
-	if ((dst == NULL) && (src == NULL))
+	if ((dest == NULL) && (src == NULL))
 		return (NULL);
 	i = 0;
 	auxsrc = src;
-	auxdst = dst;
+	auxdest = dest;
 	while (i < n)
 	{
-		auxdst[i] = auxsrc[i];
+		auxdest[i] = auxsrc[i];
 		i++;
 	}
-	return (dst);
+	return (dest);
 }
 /*#include <stdio.h>
 #include <string.h>
 int	main()
 {
-	char	src[] = "Hola, mundo!";
-	char	dst[] = "123456789";
-	int		n = 3;
+	char	src[] = "123456789";
+	char	dest[] = "Hola Ana";
+	int	n = 4;
 
-	printf("%s\n", memcpy(src, dst, n));
-	printf("%s\n", ft_memcpy(src, dst, n));
+	printf("Actual: %s\n", ft_memcpy(dest, src, n));
+	printf("Expected: %s", memcpy(dest, src, n));
 	return (0);
 }*/
