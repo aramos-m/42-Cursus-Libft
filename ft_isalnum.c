@@ -25,7 +25,7 @@ int	main()
 {
 	int	c;
 
-	c = '8';
+	c = 128;
 	printf("Actual: %d\n", ft_isalnum(c));
 	printf("Expected: %d", isalnum(c));
 	return (0);
