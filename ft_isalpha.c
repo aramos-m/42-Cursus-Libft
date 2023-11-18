@@ -18,12 +18,14 @@ int	ft_isalpha(int c)
 		return (1);
 	return (0);
 }
+
 /*#include <stdio.h>
-#include <ctype.h>
-int main ()
+int main (void)
 {
-	char c;
-	c = '+';
-	printf("Original function: %d\n", ft_isalpha(c));
-	printf("Created function: %d\n", isalpha(c));
+	int c;
+	c = ' ';
+
+	printf("%d", ft_isalpha(c));
+
+	return 0;
 }*/
