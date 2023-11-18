@@ -1,58 +1,62 @@
-#include "libft.h"
+//#include "libft.h"
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
 
-static char     *ft_divide(char const *s, char rule, int *k)
+static char	*ft_divide(char const *s, char rule, int *k, int len)
 {
-        int     *i;
+        int     i;
         int     j;
-        char    *split;
+	char	*split;
 
-        i = k;
+	split = (char *)malloc(sizeof(char)*(len + 1));
+
+        i = *k;
         j = 0;
-        while (s [*i] != rule)
+        while (s[i] != rule)
         {
-                split[j] = s[*i];
+                split[j] = s[i];
                 j++;
-                *i++;
+                i++;
         }
+	*k = i + 1;
         split[j] = '\0';
         return (split);
 }
 
-/*char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
         char    **result;
         int     i;
-        int     j;
+        int     *j;
+	int	len;
+	int	count = 1;
 
         i = 0;
-        j = 0;
-        result = malloc(sizeof(char *) * (strlen(s) + 1));
-        if (result == NULL)
-                return(NULL);
-        while (s[j] != '\0')
-        {
-                j = ft_divide(result[i], s, c, j) + 1;
-        }
-        return (result);
-}*/
+	len = strlen(s);
+        j = malloc(sizeof(int));
+        result = malloc(sizeof(char *) * (len + 1));
+        if (result == NULL || j == NULL)
+                return (NULL);
+	*j = 0;
+        while (*j <= len)
+	{
+                result[i] = ft_divide(s, c, j,len);
+		printf("%s\n",result[i]);
+	}
+	return (result);
+}
 
 int main (void)
 {
         char const      s[] = "Hola, Ana, ¿cómo estás?";
         char            **split;
         char            rule = ' ';
-        int             *k = 0;
+        int             k = 0;
 
-        split = (char **)malloc(sizeof(char *) * (strlen(s) + 1));
-
-        split[0] = ft_divide(s, rule, k);
-        //k = ft_divide(split[1], s, rule, k + 1);
-
-        printf("%s\n", split[0]);
-        //printf("%s", split[1]);
-
+	/*split = malloc(sizeof(char *)*( strlen(s) + 1));
+	split = ft_split(s,rule);
+	printf("%s\n",split[0]);*/
+	ft_split(s,rule);
         return 0;
 }
