@@ -19,12 +19,11 @@ int	ft_isdigit(int c)
 	return (0);
 }
 /*#include <stdio.h>
-#include <ctype.h>
-int	main()
+int	main(void)
 {
-	char c;
+	int c;
 
-	c = '0';
-	printf("Original function: %d\n", ft_isdigit(c));
-	printf("Created function: %d\n", isdigit(c));
+	c = '8';
+	printf("%d", ft_isdigit(c));
+	return(0);
 }*/
