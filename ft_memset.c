@@ -12,28 +12,29 @@
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, unsigned long int len)
+void	*ft_memset(void *str, int c, size_t n)
 {
-	unsigned int	i;
-	char			*aux;
+	size_t	i;
+	char	*aux;
 
-	aux = b;
+	aux = str;
 	i = 0;
-	while (i < len)
+	while (i < n)
 	{
 		aux[i] = c;
 		i++;
 	}
-	return (b);
+	return (str);
 }
-/*#include <string.h>
-#include <stdio.h>
-int	main	()
+/*#include <stdio.h>
+#include <string.h>
+int	main()
 {
-	char	dest[4] = "Hola";
-	char	*str;
-	unsigned long int len = 2;
-	int c = 'A';
-	printf("Original function:%s\n", memset(dest, c, len));
-	printf("Created fuction:%s\n", ft_memset(dest, c, len));
+	char	str[10] = "Hola Ana";
+	int	c = ' ';
+	size_t	n = 2;
+
+	printf("Actual: %s\n", ft_memset(str, c, n));
+	printf("Expected: %s", memset(str, c, n));
+	return (0);
 }*/
