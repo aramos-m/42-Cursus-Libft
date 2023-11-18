@@ -20,12 +20,11 @@ int	ft_isalnum(int c)
 	return (0);
 }
 /*#include <stdio.h>
-#include <ctype.h>
-int	main()
+int	main(void)
 {
-	char	c;
+	int	c;
 
-	c = 'B';
-	printf("Original function: %d\n", ft_isalnum(c));
-	printf("Created function: %d\n", isalnum(c));
+	c = '8';
+	printf("%d", ft_isalnum(c));
+	return(0);
 }*/
