@@ -6,7 +6,7 @@
 /*   By: aramos-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 16:15:58 by aramos-m          #+#    #+#             */
-/*   Updated: 2023/11/19 18:27:55 by aramos-m         ###   ########.fr       */
+/*   Updated: 2023/11/19 18:58:10 by aramos-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,16 @@
 #include <string.h>
 #include <stdlib.h>
 
-static char *ft_divide(char const *s, char rule, int *k, int len)
+static char *ft_divide(char const *s, char rule, int *k)
 {
     int i = *k;
     int j = 0;
     char *split;
 
-    split = (char *)malloc(sizeof(char) * (len + 1));
+	while (s[i] && s[i] != rule)
+		i++;
+    split = ft_calloc(sizeof(char), (i - *k + 1));
+	i = *k;
     if (split == NULL)
         return (NULL);
     while (s[i] != rule && s[i] != '\0')
@@ -68,14 +71,14 @@ char **ft_split(char const *s, char c)
 	i = 0;
 	j = 0;
 	word = count_word(s, c);
-    result = (char **)malloc(sizeof(char *) * (word + 1));
+    result = ft_calloc(sizeof(char *), (word + 1));
     if (result == NULL)
         return (NULL);
     while (s[j])
     {
 	    if (s[j] != c)
         {
-            result[i] = ft_divide(s, c, &j, word);
+            result[i] = ft_divide(s, c, &j);
             if (result[i] == NULL)
             {
                 while (i > 0)
