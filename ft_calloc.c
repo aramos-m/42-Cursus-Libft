@@ -6,13 +6,11 @@
 /*   By: aramos-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 18:48:49 by aramos-m          #+#    #+#             */
-/*   Updated: 2023/10/22 19:59:48 by aramos-m         ###   ########.fr       */
+/*   Updated: 2023/11/19 22:06:48 by aramos-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*#include <string.h>
-#include <stdlib.h>*/
 
 void	*ft_calloc(size_t count, size_t size)
 {
