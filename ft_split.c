@@ -6,36 +6,35 @@
 /*   By: aramos-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 16:15:58 by aramos-m          #+#    #+#             */
-/*   Updated: 2023/11/19 18:58:10 by aramos-m         ###   ########.fr       */
+/*   Updated: 2023/11/19 21:09:44 by aramos-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
 
-static char *ft_divide(char const *s, char rule, int *k)
+static char	*ft_divide(char const *s, char rule, int *k)
 {
-    int i = *k;
-    int j = 0;
-    char *split;
+	int		i;
+	int		j;
+	char	*split;
 
+	i = *k;
+	j = 0;
 	while (s[i] && s[i] != rule)
 		i++;
-    split = ft_calloc(sizeof(char), (i - *k + 1));
+	split = ft_calloc(sizeof(char), (i - *k + 1));
 	i = *k;
-    if (split == NULL)
-        return (NULL);
-    while (s[i] != rule && s[i] != '\0')
-    {
-        split[j] = s[i];
-        j++;
-        i++;
-    }
-    *k = i;
-    split[j] = '\0';
-    return (split);
+	if (split == NULL)
+		return (NULL);
+	while (s[i] != rule && s[i] != '\0')
+	{
+		split[j] = s[i];
+		j++;
+		i++;
+	}
+	*k = i;
+	split[j] = '\0';
+	return (split);
 }
 
 int	count_word(char const *s, char c)
@@ -45,69 +44,69 @@ int	count_word(char const *s, char c)
 
 	word = 0;
 	i = 0;
-
-	while(s[i] && s[i] == c)
+	while (s[i] && s[i] == c)
 	{
 		i++;
 	}
-	while(s[i])
+	while (s[i])
 	{
 		word ++;
-		while(s[i] && s[i] != c)
+		while (s[i] && s[i] != c)
 			i++;
-		while(s[i] && s[i] == c)
+		while (s[i] && s[i] == c)
 			i++;
 	}
-	return(word);
+	return (word);
 }
 
-char **ft_split(char const *s, char c)
+static void	ft_free_result(char **result, int i)
 {
-    char **result;
-    int i;
-    int j;
-    int word;
+	while (i > 0)
+	{
+		i--;
+		free(result[i]);
+	}
+	free(result);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**result;
+	int		i;
+	int		j;
+	int		word;
 
 	i = 0;
 	j = 0;
 	word = count_word(s, c);
-    result = ft_calloc(sizeof(char *), (word + 1));
-    if (result == NULL)
-        return (NULL);
-    while (s[j])
-    {
-	    if (s[j] != c)
-        {
-            result[i] = ft_divide(s, c, &j);
-            if (result[i] == NULL)
-            {
-                while (i > 0)
-                {
-                    i--;
-                    free(result[i]);
-                }
-                free(result);
-                return (NULL);
-            }
-            i++;
-        }
-        else
-            j++;
-    }
-    result[i] = NULL; // Marcar el final del array de punteros
-    return (result);
+	result = ft_calloc(sizeof(char *), (word + 1));
+	if (result == NULL)
+		return (NULL);
+	while (s[j])
+	{
+		if (s[j] != c)
+		{
+			result[i] = ft_divide(s, c, &j);
+			if (!result[i++])
+			{
+				ft_free_result(result, i);
+				return (NULL);
+			}
+		}
+		else
+			j++;
+	}
+	result[i] = NULL;
+	return (result);
 }
-/*
-int main(void)
+/*int main(void)
 {
-    char const s[] = "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultricies diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.";
+    char const s[] = "Hola/Ana,///¿qué tal?";;
     char **split;
     char rule = 'i'; 
 
-	printf("------\n");
     split = ft_split(s, rule);
 
-    // Imprimir las filas resultantes
 	int	i = 0;
 	while (split[i])
     {
