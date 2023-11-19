@@ -6,7 +6,7 @@
 /*   By: aramos-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 16:15:58 by aramos-m          #+#    #+#             */
-/*   Updated: 2023/11/19 21:09:44 by aramos-m         ###   ########.fr       */
+/*   Updated: 2023/11/19 22:42:36 by aramos-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,12 +74,11 @@ char	**ft_split(char const *s, char c)
 	char	**result;
 	int		i;
 	int		j;
-	int		word;
 
-	i = 0;
 	j = 0;
-	word = count_word(s, c);
-	result = ft_calloc(sizeof(char *), (word + 1));
+	i = count_word(s, c);
+	result = ft_calloc(sizeof(char *), (i + 1));
+	i = 0;
 	if (result == NULL)
 		return (NULL);
 	while (s[j])
@@ -88,10 +87,7 @@ char	**ft_split(char const *s, char c)
 		{
 			result[i] = ft_divide(s, c, &j);
 			if (!result[i++])
-			{
-				ft_free_result(result, i);
-				return (NULL);
-			}
+				return (ft_free_result(result, i), NULL);
 		}
 		else
 			j++;
