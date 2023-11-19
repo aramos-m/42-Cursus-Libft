@@ -6,7 +6,7 @@
 /*   By: aramos-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 15:22:54 by aramos-m          #+#    #+#             */
-/*   Updated: 2023/11/19 21:42:03 by aramos-m         ###   ########.fr       */
+/*   Updated: 2023/11/19 21:47:43 by aramos-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,20 @@ static	int	ft_nbrlen(int n)
 	return (len);
 }
 
+static void	ft_convert(int n, char *nbr, int i)
+{
+	nbr[i] = '\0';
+	while (n != 0)
+	{
+		if (nbr[i] != '-')
+		{
+			nbr[i - 1] = (n % 10) + '0';
+			n /= 10;
+		}
+		i--;
+	}
+}
+
 char	*ft_itoa(int n)
 {
 	char	*nbr;
@@ -48,16 +62,7 @@ char	*ft_itoa(int n)
 		nbr[0] = '-';
 		n *= -1;
 	}
-	nbr[i] = '\0';
-	while (n != 0)
-	{
-		if (nbr[i] != '-')
-		{
-			nbr[i - 1] = (n % 10) + '0';
-			n /= 10;
-		}
-		i--;
-	}
+	ft_convert(n, nbr, i);
 	return (nbr);
 }
 /*#include <stdio.h>
