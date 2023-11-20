@@ -6,7 +6,7 @@
 /*   By: aramos-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 22:02:41 by aramos-m          #+#    #+#             */
-/*   Updated: 2023/10/17 23:17:16 by aramos-m         ###   ########.fr       */
+/*   Updated: 2023/11/20 21:12:03 by aramos-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t		i;
+	size_t			i;
 	unsigned char	*saux;
 
 	i = 0;
