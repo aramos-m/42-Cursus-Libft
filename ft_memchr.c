@@ -32,11 +32,11 @@ void	*ft_memchr(const void *s, int c, size_t n)
 
 int	main()
 {
-	const void	s[] = "Hello, World!";
+	const char	s* = "Hello, World!";
 	int		c = 'o';
 	size_t		n = 5;
 
-	printf("Actual: %s\n", (char *)ft_memchr(s, c, n));
-	printf("Expected: %s", (char *)memchr(s, c, n));
+	printf("Actual: %s\n", ft_memchr(s, c, n));
+	printf("Expected: %s", memchr(s, c, n));
 	return (0);
 }*/
