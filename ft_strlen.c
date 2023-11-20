@@ -6,7 +6,7 @@
 /*   By: aramos-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 20:35:53 by aramos-m          #+#    #+#             */
-/*   Updated: 2023/10/17 21:16:20 by aramos-m         ###   ########.fr       */
+/*   Updated: 2023/11/20 20:48:11 by aramos-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,9 @@ int	ft_strlen(const char *s)
 #include <string.h>
 int	main()
 {
-	char	s[] = " ";
-	int	org;
-	int	cre;
+	char	*src = " ";
 
-	org = strlen(s);
-	cre = ft_strlen(s);
-	printf("Original function: %d\n", org);
-	printf("Created function: %d\n", cre);
+	printf("Actual: %d\n", ft_strlen(s));
+	printf("Expected: %d", strlen(s));
+	return (0);
 }*/

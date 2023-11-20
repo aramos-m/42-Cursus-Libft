@@ -6,7 +6,7 @@
 /*   By: aramos-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 19:53:52 by aramos-m          #+#    #+#             */
-/*   Updated: 2023/10/22 19:54:11 by aramos-m         ###   ########.fr       */
+/*   Updated: 2023/11/20 21:04:20 by aramos-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,27 +15,26 @@
 void	ft_bzero(void *s, size_t n)
 {
 	size_t	i;
-	char	*aux;
+	char	*saux;
 
 	i = 0;
-	aux = s;
+	saux = s;
 	while (i < n)
 	{
-		aux[i] = 0;
+		saux[i] = 0;
 		i++;
 	}
 }
-
 /*#include <stdio.h>
 #include <string.h>
 int	main ()
 {
-	char	str1[20];
-	char	str2[20];
+	char	s[8] = "Hola Ana";
+	size_t	n  = 1;
 
-	bzero(str1, 3);
-	ft_bzero(str1, 3);
-
-	printf("Actual: %s\n", str1);
-	printf("Expected: %s\n", str2);
+	bzero(s, n);
+	printf("%s\n", s);
+	ft_bzero(s,n);
+	printf("%s\n", s);
+	return(0);
 }*/

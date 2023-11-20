@@ -6,7 +6,7 @@
 /*   By: aramos-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 20:59:21 by aramos-m          #+#    #+#             */
-/*   Updated: 2023/10/22 21:05:43 by aramos-m         ###   ########.fr       */
+/*   Updated: 2023/11/20 20:50:06 by aramos-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	*ft_memset(void *str, int c, size_t n)
 int	main()
 {
 	char	str[10] = "Hola Ana";
-	int	c = ' ';
+	int		c = ' ';
 	size_t	n = 2;
 
 	printf("Actual: %s\n", ft_memset(str, c, n));
