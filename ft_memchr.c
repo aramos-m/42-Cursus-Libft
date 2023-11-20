@@ -14,15 +14,15 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned int	i;
-	unsigned char	*ptr;
+	size_t		i;
+	unsigned char	*saux;
 
 	i = 0;
-	ptr = (unsigned char *)s;
+	saux = (unsigned char *)s;
 	while (i < n)
 	{
-		if ((unsigned char)c == ptr[i])
-			return (ptr + i);
+		if ((unsigned char)c == saux[i])
+			return (saux + i);
 		i++;
 	}
 	return (0);
@@ -30,13 +30,13 @@ void	*ft_memchr(const void *s, int c, size_t n)
 /*#include <stdio.h>
 #include <string.h>
 
-int	main(void)
+int	main()
 {
-	unsigned char	s[] = "Hello, World!";
-	char			c = 'o';
-	size_t			n = 5;
+	const void	s[] = "Hello, World!";
+	int		c = 'o';
+	size_t		n = 5;
 
-	printf("Original function: %s\n", (char *) memchr(s, c, n));
-	printf("Created function: %s\n", (char *)ft_memchr(s, c, n));
+	printf("Actual: %s\n", (char *)ft_memchr(s, c, n));
+	printf("Expected: %s", (char *)memchr(s, c, n));
 	return (0);
 }*/
