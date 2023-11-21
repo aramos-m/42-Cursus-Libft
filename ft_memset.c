@@ -6,7 +6,7 @@
 /*   By: aramos-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 20:59:21 by aramos-m          #+#    #+#             */
-/*   Updated: 2023/11/20 21:11:23 by aramos-m         ###   ########.fr       */
+/*   Updated: 2023/11/21 20:54:38 by aramos-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,15 +26,3 @@ void	*ft_memset(void *str, int c, size_t n)
 	}
 	return (str);
 }
-/*#include <stdio.h>
-#include <string.h>
-int	main()
-{
-	char	str[10] = "Hola Ana";
-	int		c = ' ';
-	size_t	n = 2;
-
-	printf("Actual: %s\n", ft_memset(str, c, n));
-	printf("Expected: %s", memset(str, c, n));
-	return (0);
-}*/

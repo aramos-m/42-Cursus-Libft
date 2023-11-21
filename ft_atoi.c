@@ -6,7 +6,7 @@
 /*   By: aramos-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 18:42:04 by aramos-m          #+#    #+#             */
-/*   Updated: 2023/10/22 18:45:24 by aramos-m         ###   ########.fr       */
+/*   Updated: 2023/11/21 21:30:37 by aramos-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,13 +37,3 @@ int	ft_atoi(const char *str)
 	}
 	return (number * sign);
 }
-/*#include <stdio.h>
-#include <stdlib.h>
-int	main(void)
-{
-	char	str[] = "-1234a";
-
-	printf("Actual: %d\n", atoi(str));
-	printf("Expected: %d", ft_atoi(str));
-	return (0);
-}*/

@@ -6,7 +6,7 @@
 /*   By: aramos-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 19:05:34 by aramos-m          #+#    #+#             */
-/*   Updated: 2023/10/30 19:11:50 by aramos-m         ###   ########.fr       */
+/*   Updated: 2023/11/21 21:49:58 by aramos-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,3 @@ void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }
-
-/*int	main(void)
-{
-	char	c = 'A';
-	int		fd;
-
-	fd = 1;
-	ft_putchar_fd(c, fd);
-	return (0);
-}*/

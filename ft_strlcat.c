@@ -6,7 +6,7 @@
 /*   By: aramos-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 22:38:43 by aramos-m          #+#    #+#             */
-/*   Updated: 2023/10/22 21:09:58 by aramos-m         ###   ########.fr       */
+/*   Updated: 2023/11/21 21:13:19 by aramos-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,20 +38,3 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	}
 	return (total);
 }
-
-/*#include <stdio.h>
-#include <string.h>
-int main()
-{
-	char dest[8] = "Hola, ";
-	char dest1[8] = "Hola, ";
-	char src[] = "mundo!";
-
-	printf("%u\n", ft_strlcat(dest, src, 0));
-	printf("%lu\n", strlcat(dest1, src, 0));
-
-	printf("Result: %s\n", dest);
-	printf("%s\n", dest1);
-
-	return 0;
-}*/

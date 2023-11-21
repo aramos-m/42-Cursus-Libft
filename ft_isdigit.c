@@ -6,7 +6,7 @@
 /*   By: aramos-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 20:18:49 by aramos-m          #+#    #+#             */
-/*   Updated: 2023/10/22 21:03:14 by aramos-m         ###   ########.fr       */
+/*   Updated: 2023/11/21 20:37:42 by aramos-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,3 @@ int	ft_isdigit(int c)
 		return (1);
 	return (0);
 }
-/*#include <stdio.h>
-#include <ctype.h>
-int	main()
-{
-	int c;
-
-	c = '8';
-	printf("%d", ft_isdigit(c));
-	return(0);
-}*/

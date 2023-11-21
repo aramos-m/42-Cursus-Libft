@@ -6,7 +6,7 @@
 /*   By: aramos-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 18:48:49 by aramos-m          #+#    #+#             */
-/*   Updated: 2023/11/19 22:06:48 by aramos-m         ###   ########.fr       */
+/*   Updated: 2023/11/21 21:32:00 by aramos-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,3 @@ void	*ft_calloc(size_t count, size_t size)
 		ft_bzero((void *)ptr, count * size);
 	return (ptr);
 }
-/*#include <stdio.h>
-#include <stdlib.h>
-int	main(void)
-{
-	size_t	count = 5;
-	size_t	size = 2;
-	printf("Actual: %s\n", calloc(count, size));
-	printf("Expected: %s\n", ft_calloc(count, size));
-
-	return (0);
-}*/

@@ -6,7 +6,7 @@
 /*   By: aramos-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 19:31:33 by aramos-m          #+#    #+#             */
-/*   Updated: 2023/11/19 22:11:22 by aramos-m         ###   ########.fr       */
+/*   Updated: 2023/11/21 21:36:49 by aramos-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,14 +37,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	}
 	return (str);
 }
-/*int	main(void)
-{
-	char const		*s = "Hola, ¿que tal?";
-	unsigned int	start;
-	size_t			len;
-
-	start = 20;
-	len = 5;
-	printf("%s\n", ft_substr(s, start, len));
-	return (0);
-}*/

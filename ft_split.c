@@ -6,7 +6,7 @@
 /*   By: aramos-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 16:15:58 by aramos-m          #+#    #+#             */
-/*   Updated: 2023/11/19 22:42:36 by aramos-m         ###   ########.fr       */
+/*   Updated: 2023/11/21 21:40:09 by aramos-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,21 +95,3 @@ char	**ft_split(char const *s, char c)
 	result[i] = NULL;
 	return (result);
 }
-/*int main(void)
-{
-    char const s[] = "Hola/Ana,///¿qué tal?";;
-    char **split;
-    char rule = 'i'; 
-
-    split = ft_split(s, rule);
-
-	int	i = 0;
-	while (split[i])
-    {
-        printf("Fila %d: %s\n", i + 1, split[i]);
-        free(split[i]); // Liberar memoria de cada fila
-		i++;
-    }
-    free(split); // Liberar memoria del array de punteros
-    return 0;
-}*/

@@ -6,7 +6,7 @@
 /*   By: aramos-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 20:34:37 by aramos-m          #+#    #+#             */
-/*   Updated: 2023/10/22 21:01:07 by aramos-m         ###   ########.fr       */
+/*   Updated: 2023/11/21 20:42:10 by aramos-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,3 @@ int	ft_isalnum(int c)
 		return (1);
 	return (0);
 }
-/*#include <stdio.h>
-int	main()
-{
-	int	c;
-
-	c = 128;
-	printf("%d", ft_isalnum(c));
-	return (0);
-}*/

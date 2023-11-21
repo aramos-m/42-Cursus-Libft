@@ -6,13 +6,13 @@
 /*   By: aramos-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 15:22:54 by aramos-m          #+#    #+#             */
-/*   Updated: 2023/11/19 21:47:43 by aramos-m         ###   ########.fr       */
+/*   Updated: 2023/11/21 21:45:13 by aramos-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	int	ft_nbrlen(int n)
+static int	ft_nbrlen(int n)
 {
 	int	len;
 
@@ -65,11 +65,3 @@ char	*ft_itoa(int n)
 	ft_convert(n, nbr, i);
 	return (nbr);
 }
-/*#include <stdio.h>
-int	main(void)
-{
-	int	n = 42; 
-
-	printf("%s\n", ft_itoa(n));
-	return (0);
-}*/

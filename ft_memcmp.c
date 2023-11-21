@@ -6,7 +6,7 @@
 /*   By: aramos-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 23:19:25 by aramos-m          #+#    #+#             */
-/*   Updated: 2023/10/17 23:39:36 by aramos-m         ###   ########.fr       */
+/*   Updated: 2023/11/21 21:27:26 by aramos-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,16 +29,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-/*#include <stdio.h>
-#include <string.h>
-
-int	main(void)
-{
-	const char	str1[] = "H42lo, World!";
-	const char	str2[] = "Hello, World!";
-	size_t		n = 5;
-
-	printf("Original function: %d\n", memcmp(str1, str2, n));
-	printf("Created function: %d\n", ft_memcmp(str1, str2, n));
-	return (0);
-}*/
