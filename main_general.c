@@ -214,18 +214,17 @@ int main(void)
 	printf("\n");
 
 	printf("Esta es la función SPLIT:\n");
-	char const s[] = "Hola/Ana,///¿qué tal?";;
-    char **split;
-    char rule = 'i';
-    split = ft_split(s, rule);
+	char const s[] = "Hola/Ana,///¿qué tal?";
+	char **split = ft_split(s, rule);
+	char rule = 'i';
 	int	i = 0;
 	while (split[i])
-    {
+	{
         printf("Fila %d: %s\n", i + 1, split[i]);
         free(split[i]);
 		i++;
-    }
-    free(split);
+	}
+	free(split);
 	printf("\n");
 
 	printf("Esta es la función ITOA:\n");
