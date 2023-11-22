@@ -29,13 +29,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	sset = ft_substr(s1, 0, i + 1);
 	return (sset);
 }
-
-/*#include <stdio.h>
-int	main()
-{
-	const char      *s1 = "\tHola, mundo!\n\t";
-	const char      *set = "\t\n";
-
-	printf("%s\n", ft_strtrim(s1, set));
-	return 0;
-}*/
