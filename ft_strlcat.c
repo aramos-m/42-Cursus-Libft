@@ -6,35 +6,31 @@
 /*   By: aramos-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 22:38:43 by aramos-m          #+#    #+#             */
-/*   Updated: 2023/11/21 21:13:19 by aramos-m         ###   ########.fr       */
+/*   Updated: 2023/11/22 20:47:01 by aramos-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dest, const char *src, size_t size)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
-	size_t	l_src;
-	size_t	l_dest;
-	size_t	total;
+	size_t	j;
+	int		result;
 
-	i = 0;
-	l_src = ft_strlen(src);
-	l_dest = ft_strlen(dest);
-	total = l_src + l_dest;
-	if (l_dest >= size)
+	if (dstsize == 0)
+		return (ft_strlen(src));
+	if (dstsize <= (size_t)ft_strlen(dst))
+		return (dstsize + (size_t)ft_strlen(src));
+	j = 0;
+	i = ft_strlen(dst);
+	while (src[j] != '\0' && i + 1 < dstsize)
 	{
-		return (size + l_src);
+		dst[i] = src[j];
+		++i;
+		++j;
 	}
-	if (l_dest < size)
-	{
-		while (src[i] != '\0' && l_dest + i < size - 1)
-		{
-			dest[l_dest + i] = src[i];
-			i++;
-		}
-		dest[l_dest + i] = '\0';
-	}
-	return (total);
+	dst[i] = '\0';
+	result = (ft_strlen(dst) + ft_strlen(&src[j]));
+	return ((size_t)result);
 }

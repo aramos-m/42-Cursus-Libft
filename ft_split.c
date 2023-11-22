@@ -75,6 +75,8 @@ char	**ft_split(char const *s, char c)
 	int		i;
 	int		j;
 
+	if (!s)
+		return (NULL);
 	j = 0;
 	i = count_word(s, c);
 	result = ft_calloc(sizeof(char *), (i + 1));

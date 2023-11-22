@@ -21,7 +21,7 @@ static int	ft_nbrlen(int n)
 	{
 		n *= -1;
 		len++;
-	}	
+	}
 	while (n != 0)
 	{
 		n = n / 10;
