@@ -11,9 +11,9 @@
 /* ************************************************************************** */
 
 #include <ctype.c>
-#include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <stdio.h>
 #include "libft.h"
 
 char	funcionrara(unsigned int i, char c)
