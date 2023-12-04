@@ -49,7 +49,7 @@ int main(void)
 	printf("\n");
 
 	printf("Esta es la función ISASCII:\n");
-	int	c = '128';
+	int	c = 128;
 	printf("%d\n", ft_isascii(c));
 	printf("%d\n", isascii(c));
 	printf("\n");
