@@ -58,7 +58,7 @@ int main(void)
 	printf("Esta es la función STRLEN:\n");
 	char	s[] = " ";
 	printf("%d\n", ft_strlen(s));
-	printf("%d\n", strlen(s));
+	printf("%lu\n", strlen(s));
 	printf("\n");
 
 	printf("Esta es la función MEMSET:\n");
@@ -113,15 +113,13 @@ int main(void)
 	printf("\n");
 
 	printf("Esta es la función TOUPPER:\n");
-	int c = 'a';
-	printf("%d\n", toupper(c));
-	printf("%d\n", ft_toupper(c));
+	printf("%d\n", toupper('a'));
+	printf("%d\n", ft_toupper('a'));
 	printf("\n");
 
 	printf("Esta es la función TOLOWER:\n");
-	int	c = 'A';
-	printf("%d\n", tolower(c));
-	printf("%d\n", ft_tolower(c));
+	printf("%d\n", tolower('A'));
+	printf("%d\n", ft_tolower('A'));
 	printf("\n");
 
 	printf("Esta es la función STRCHR:\n");
