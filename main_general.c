@@ -31,33 +31,28 @@ void	funcionrara2(unsigned int i, char *c)
 int main(void)
 {
 	printf("Esta es la función ISALPHA:\n");
-	int	c = ' ';
-	printf("%d\n", ft_isalpha(c));
-	printf("%d\n", isalpha(c));
+	printf("%d\n", ft_isalpha(' '));
+	printf("%d\n", isalpha(' '));
 	printf("\n");
 
 	printf("Esta es la función ISDIGITA:\n");
-	int	c = '8';
-	printf("%d\n", ft_isdigit(c));
-	printf("%d\n", isdigit(c));
+	printf("%d\n", ft_isdigit('8'));
+	printf("%d\n", isdigit('8'));
 	printf("\n");
 
 	printf("Esta es la función ISALNUM:\n");
-	int	c = '128';
-	printf("%d\n", ft_isalnum(c));
-	printf("%d\n", isalnum(c));
+	printf("%d\n", ft_isalnum(128));
+	printf("%d\n", isalnum(128));
 	printf("\n");
 
 	printf("Esta es la función ISASCII:\n");
-	int	c = 128;
-	printf("%d\n", ft_isascii(c));
-	printf("%d\n", isascii(c));
+	printf("%d\n", ft_isascii(128));
+	printf("%d\n", isascii(128));
 	printf("\n");
 	
 	printf("Esta es la función ISPRINT:\n");
-	int	c = '\t';
-	printf("%d\n", ft_isprint(c));
-	printf("%d\n", isprint(c));
+	printf("%d\n", ft_isprint('\t'));
+	printf("%d\n", isprint('\t'));
 	printf("\n");
 
 	printf("Esta es la función STRLEN:\n");
@@ -246,27 +241,19 @@ int main(void)
 	printf("\n");
 
 	printf("Esta es la función PUTCHAR_FD:\n");
-	char	c = 'A';
-	int		fd = 1;;
-	ft_putchar_fd(c, fd);
+	ft_putchar_fd('A', 1);
 	printf("\n");
 
 	printf("Esta es la función PUTSTR_FD:\n");
-	char	*s = "Hola, soy Ana";
-	int		fd = 1;
-	ft_putstr_fd(s, fd);
-	printf("\n");
+	ft_putstr_fd("Hola soy Ana", 1);
+	printf("\n\n");
 
 	printf("Esta es la función PUTENDL_FD:\n");
-	char	*s = "Hola, soy Ana";
-	int		fd = 1;
-	ft_putstr_fd(s, fd);
+	ft_putstr_fd("Hola soy Ana", 1);
 	printf("\n");
 
 	printf("Esta es la función PUTNBR_FD:\n");
-	int	n = -456;
-	int	fd = 1;
-	ft_putnbr_fd(n, fd);
+	ft_putnbr_fd(-456, 1);
 	printf("\n\n");
 	
 	return (0);
