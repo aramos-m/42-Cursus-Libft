@@ -15,13 +15,33 @@
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*scat;
+	int	i;
+	int	j;
+	int	lens1;
+	int	lens2;
+
+	i = 0;
+	j = 0;
 
 	if (!s1 || !s2)
 		return (NULL);
-	scat = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	lens1 = ft_strlen(s1);
+	lens2 = ft_strlen(s2);
+	scat = malloc(lens1 + lens2 + 1);
+	if (!scat)
+		return (NULL);
+	while (s1[i])
+		scat[j++] = s1[i++];
+	i = 0;
+	while (s2[i])
+		scat[j++] = s2[i++];
+	scat[j] = '\0';
+	return (scat);
+}	
+	/*scat = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
 	if (scat == NULL)
 		return (NULL);
 	ft_strlcpy(scat, s1, (size_t)ft_strlen(s1) + 1);
 	ft_strlcat(scat, s2, ft_strlen (s1) + ft_strlen(s2) + 1);
 	return (scat);
-}
+}*/
