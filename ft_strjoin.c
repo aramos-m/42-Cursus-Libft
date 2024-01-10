@@ -17,16 +17,12 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*scat;
 	int		i;
 	int		j;
-	int		lens1;
-	int		lens2;
 
 	i = 0;
 	j = 0;
 	if (!s1 || !s2)
 		return (NULL);
-	lens1 = ft_strlen(s1);
-	lens2 = ft_strlen(s2);
-	scat = malloc(lens1 + lens2 + 1);
+	scat = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
 	if (!scat)
 		return (NULL);
 	while (s1[i])
